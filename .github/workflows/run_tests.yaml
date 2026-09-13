@@ -23,6 +23,10 @@ jobs:
           python-version: "3.10"      
     - name: install dependencies
       run: pip install -r requirements.txt
+    - name: Setup Geckodriver
+      uses: browser-actions/setup-geckodriver@latest
+    - name: Verify Geckodriver
+      run: geckodriver --version
     - name: Run tests
       run: pytest -v
       
