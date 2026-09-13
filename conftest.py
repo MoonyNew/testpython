@@ -6,7 +6,7 @@ from selenium.webdriver.firefox.options import Options
 def browser():
     browser = webdriver.Firefox()
     options=Options()
-    options.add_argument("--headless")
+    options.add_argument("-headless")
     browser=webdriver.Firefox(options=options)
     browser.maximize_window()
     browser.implicitly_wait(3)
